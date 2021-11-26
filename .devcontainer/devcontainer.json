@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/php
+{
+	"name": "PHP",
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "web",
+	"workspaceFolder": "/var/www/html",
+	"shutdownAction": "stopCompose",
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"php.validate.executablePath": "/usr/local/bin/php",
+		"editor.tabSize": 4
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"felixfbecker.php-debug",
+		"bmewburn.vscode-intelephense-client",
+		"small.php-ci",
+		"mrmlnc.vscode-apache",
+		"neilbrayfield.php-docblocker",
+		"mehedidracula.php-namespace-resolver",
+		"ms-azuretools.vscode-docker",
+		"mikestead.dotenv",
+		"eamodio.gitlens",
+		"formulahendry.auto-close-tag"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [80],
+
+	// Other features
+	"features": {
+		"git": "latest"
+	}
+}
