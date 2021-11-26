@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 # Configuring server to host CI-4 application
 RUN apt-get update && apt-get upgrade -y &&\
-    apt-get install autoconf libicu-dev zip unzip -y &&\
+    apt-get install autoconf libicu-dev zip unzip openssh-client -y &&\
     echo "ServerName localhost" >> /etc/apache2/apache2.conf &&\
     sed -i 's%/var/www/html%/var/www/html/public%g' \
     "/etc/apache2/sites-available/000-default.conf" &&\
